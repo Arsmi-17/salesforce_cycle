@@ -20,6 +20,8 @@ public class CycleDataManager : MonoBehaviour
 
     public void ProcessGameData(int[] rotations)
     {
+        if (GameManager.Instance == null || !GameManager.Instance.IsRoundActive) return;
+
         float time = Time.time;
         float dt = Time.deltaTime;
 
@@ -49,6 +51,7 @@ public class CycleDataManager : MonoBehaviour
 [System.Serializable]
 public class PlayerCycleData
 {
+    public string PlayerName = "";
     public int TotalRotations;
     public float TotalDistance;   // meters
     public float Speed;          // m/s (smoothed)

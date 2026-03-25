@@ -52,7 +52,7 @@ public class OSCManager : MonoBehaviour
         Debug.Log("[OSC] /start-game " + string.Join(", ", names));
 
         if (GameManager.Instance != null)
-            GameManager.Instance.OnStartGameReceived();
+            GameManager.Instance.OnStartGameReceived(names);
     }
 
     public void SendSerialValue(string value)

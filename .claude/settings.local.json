@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/_Harsh/UnityProjects/_ArsMi/AMNS_Cycle/Assets -type f -name *Test* -o -path */Tests/*)",
+      "Bash(wc:*)"
+    ]
+  }
+}
